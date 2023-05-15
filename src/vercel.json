@@ -1,7 +1,7 @@
 {
     "builds": [
         {
-            "src": "python-monitoring-app-demo/wsgi.py",
+            "src": "python-monitoring-app-demo/run.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
@@ -12,7 +12,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "python-monitoring-app-demo/wsgi.py"
+            "dest": "python-monitoring-app-demo/run.py"
         }
     ]
 }
