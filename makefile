@@ -38,7 +38,7 @@ push:  ## 📤 Push container image to registry
 
 run: venv  ## 🏃 Run the server locally using Python & Flask
 	. $(SRC_DIR)/.venv/bin/activate \
-	&& python src/run.py
+	&& python3 src/run.py
 
 deploy:  ## 🚀 Deploy to Azure Web App 
 	az group create --resource-group $(AZURE_RES_GROUP) --location $(AZURE_REGION) -o table
