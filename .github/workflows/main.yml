@@ -16,7 +16,7 @@ jobs:
       - name: test Python3 & pip & flask
         run: |
           python3 --version && \
-          pip --version && \
+          pip --version 
         # flask --version
         
       - name: Set Up Environment
