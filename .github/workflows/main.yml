@@ -1,0 +1,29 @@
+name: Monitoring App Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        
+      - name: Set Up Environment
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+      
+      - name: Install Requirements
+        run: |
+          cd src
+          pip install --no-cache-dir -r requirements.txt --break-system-packages
+      
+      - name: Build Flask App
+        run: |
+          cd src
+          flask run --host=0.0.0.0 --port=5002
