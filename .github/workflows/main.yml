@@ -32,4 +32,4 @@ jobs:
       - name: Build Flask App
         run: |
           cd src && \
-          flask run --host=0.0.0.0 --port=5002
+          flask run --host=0.0.0.0 --port=5004
