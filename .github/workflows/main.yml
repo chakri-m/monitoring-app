@@ -17,7 +17,7 @@ jobs:
         run: |
           python3 --version && \
           pip --version && \
-          flask --version
+        # flask --version
         
       - name: Set Up Environment
         run: |
