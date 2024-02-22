@@ -12,6 +12,12 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+    
+      - name: test Python3 & pip & flask
+        run: 
+          python3 --version
+          python3-pip --version
+          flask --version
         
       - name: Set Up Environment
         run: |
